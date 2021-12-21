@@ -24,7 +24,10 @@ const config = {
           editUrl: 'https://github.com/andrew781026/docusaurus-site/edit/main/my-website/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [
+            require.resolve('./src/css/custom.css'),
+            require.resolve('./src/css/tailwind.min.css'),
+          ],
         },
       }),
     ],
@@ -54,7 +57,7 @@ const config = {
           href: 'https://github.com/andrew781026/docusaurus-site',
           label: 'GitHub',
           position: 'right',
-          className: 'mr-8',
+          className: 'mr-4',
         },
       ],
     },
