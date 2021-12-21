@@ -13,6 +13,11 @@ const config = {
   organizationName: 'YSDT', // Usually your GitHub org/user name.
   projectName: 'YSDT-frontend-docs', // Usually your repo name.
 
+  stylesheets: [
+    // String format.
+    'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css',
+  ],
+
   presets: [
     [
       'classic',
@@ -25,7 +30,6 @@ const config = {
         },
         theme: {
           customCss: [
-            require.resolve('./src/css/tailwind.min.css'),
             require.resolve('./src/css/custom.css'),
           ],
         },
