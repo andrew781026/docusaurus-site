@@ -30,3 +30,13 @@
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+/* tailwind 會設定 svg 是 block */
+.theme-doc-footer-edit-meta-row svg {
+  display: inline;
+}
+
+.navbar__items svg {
+  display: inline;
+  vertical-align: baseline;
+}
