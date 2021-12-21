@@ -36,6 +36,8 @@ jobs:
 
       # install node.js
       - uses: actions/setup-node@v1
+        with:
+          node-version: '16.13.1'
 
       # Runs a single command using the runners shell
       - name: install dependencies
