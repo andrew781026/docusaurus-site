@@ -32,7 +32,8 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 }
 
 /* tailwind 會設定 svg 是 block */
-.theme-doc-footer-edit-meta-row svg {
+.theme-doc-footer-edit-meta-row svg,
+.text--center svg {
   display: inline;
 }
 
