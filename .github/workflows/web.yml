@@ -38,10 +38,12 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '16.13.1'
+          # Caching npm dependencies:
+          cache: 'yarn'
 
       # Runs a single command using the runners shell
       - name: install dependencies
-        run: cd my-website && npm install
+        run: cd my-website && yarn install
 
       # Runs a single command using the runners shell
       - name: try to build the project
