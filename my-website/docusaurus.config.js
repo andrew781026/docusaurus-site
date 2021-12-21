@@ -3,14 +3,14 @@
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'YSDT 重構案 - 前端文件',
   tagline: 'Dinosaurs are cool',
   url: 'https://andrew781026.github.io',
   baseUrl: '/docusaurus-site/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
+  organizationName: 'YSDT', // Usually your GitHub org/user name.
   projectName: 'YSDT-frontend-docs', // Usually your repo name.
 
   presets: [
@@ -21,7 +21,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
+          editUrl: 'https://github.com/andrew781026/docusaurus-site/edit/main/my-website/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
