@@ -16,6 +16,10 @@
   --ifm-code-font-size: 95%;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
@@ -25,4 +29,12 @@
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.mr-4 {
+  margin-right: 0.4rem;
+}
+
+.mr-8 {
+  margin-right: 0.8rem;
 }
