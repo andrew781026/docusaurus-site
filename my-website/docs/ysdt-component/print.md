@@ -41,7 +41,7 @@
 
 我們需要建立一個 print_XXX 的 pug 檔案 , 當作符合 A4 列印的頁面
 
-以列印 `對應總表` 為例 , 我們需要多切版一個頁面 `print_vendor_summary_statement.pug` 當作列印 A4 頁面所使用的版型
+以列印 `對應總表` 為例 , 我們需要多切版一個頁面 `print_vendor_summary_statement.html` 當作列印 A4 頁面所使用的版型
 
 ![列印對應總表](print/print_vendor_summary_statement.png)
 
@@ -72,7 +72,7 @@ const printFn = async () => {
 
   const htmlStr = await new window.PrintCtrl().getHtmlString({
     url: '/print_vendor_summary_statement.html',
-    data: {param_1: '8913038,', param_2: 5566},
+    data: {param_1: '你的參數', param_2: 5566},
     method: 'post',
   })
 
@@ -89,5 +89,7 @@ printFn().then(console.log).catch(console.error)
 其實 `PrintCtrl().print` 只是對 3 個套件做包裝 , 讓列印的呼叫更簡單方便 ,
 
 包裝的內容如下 :
-1.建立一個 iframe 將 body 內容塞入 or 用 url 準備好要列印的 html 內容 2.藉由 html2canvas.js 將 iframe 裡面的 .main 區塊做截圖處理 3.利用 jsPdf 將剛剛的圖片 , 塞入
-pdf 中並將其設定成 A4 的 1 頁 4.利用 print.js 打開 列印介面 並將剛剛的 pdf 當成要列印的內容
+- 1️⃣ 建立一個 iframe 將 body 內容塞入 or 用 url 準備好要列印的 html 內容
+- 2️⃣ 藉由 html2canvas.js 將 iframe 裡面的 .main 區塊做截圖處理
+- 3️⃣ 利用 jsPdf 將剛剛的圖片 , 塞入 pdf 中並將其設定成 A4 的 1 頁
+- 4️⃣ 利用 print.js 打開 列印介面 並將剛剛的 pdf 當成要列印的內容

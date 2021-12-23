@@ -13,5 +13,5 @@ sidebar_position: 1
 - fileListBox
 - [PrintCtrl.print](print)
 - uploadProgressBar
-- datePicker
+- [datePicker](date_picker)
 - ...
