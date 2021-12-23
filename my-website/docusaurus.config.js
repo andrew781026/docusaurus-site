@@ -53,7 +53,7 @@ const config = {
       items: [
         {
           type: 'doc',
-          docId: 'intro',
+          docId: 'ysdt-component/index',
           position: 'left',
           label: '範例',
         },
