@@ -16,7 +16,8 @@
 
 ### 第三方套件
 
-列印功能我們有引用 [print.js](https://printjs.crabbly.com/) . [html2canvas](https://html2canvas.hertzen.com/) . [jsPdf](https://github.com/parallax/jsPDF) 這 3 個第三方套件
+列印功能我們有引用 [print.js](https://printjs.crabbly.com/) . [html2canvas](https://html2canvas.hertzen.com/)
+. [jsPdf](https://github.com/parallax/jsPDF) 這 3 個第三方套件
 
 因此需要先將其引入到 html 中
 
@@ -62,7 +63,7 @@
 
 ```javascript
 // 使用 get 列印
-new window.PrintCtrl().print({ url: '/print_vendor_summary_statement.html' })
+new window.PrintCtrl().print({url: '/print_vendor_summary_statement.html'})
 
 // 使用 post 列印
 const printFn = async () => {
@@ -71,11 +72,11 @@ const printFn = async () => {
 
   const htmlStr = await new window.PrintCtrl().getHtmlString({
     url: '/print_vendor_summary_statement.html',
-    data: { snos: '8913038,' },
+    data: {param_1: '8913038,', param_2: 5566},
     method: 'post',
   })
 
-  await new window.PrintCtrl().print({ htmlStr })
+  await new window.PrintCtrl().print({htmlStr})
 
   LoadingBox.hide()
 }
@@ -88,7 +89,5 @@ printFn().then(console.log).catch(console.error)
 其實 `PrintCtrl().print` 只是對 3 個套件做包裝 , 讓列印的呼叫更簡單方便 ,
 
 包裝的內容如下 :
-1.建立一個 iframe 將 body 內容塞入 or 用 url 準備好要列印的 html 內容
-2.藉由 html2canvas.js 將 iframe 裡面的 .main 區塊做截圖處理
-3.利用 jsPdf 將剛剛的圖片 , 塞入 pdf 中並將其設定成 A4 的 1 頁
-4.利用 print.js 打開 列印介面 並將剛剛的 pdf 當成要列印的內容
+1.建立一個 iframe 將 body 內容塞入 or 用 url 準備好要列印的 html 內容 2.藉由 html2canvas.js 將 iframe 裡面的 .main 區塊做截圖處理 3.利用 jsPdf 將剛剛的圖片 , 塞入
+pdf 中並將其設定成 A4 的 1 頁 4.利用 print.js 打開 列印介面 並將剛剛的 pdf 當成要列印的內容
