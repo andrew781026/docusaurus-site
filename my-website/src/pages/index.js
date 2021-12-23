@@ -25,6 +25,15 @@ function HomepageHeader() {
   );
 }
 
+const Footer = () => {
+
+  return (
+    <div>
+      你好 !
+    </div>
+  )
+}
+
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (

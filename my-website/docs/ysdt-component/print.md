@@ -48,13 +48,11 @@
 如果要製作其他報表來列印 , 需要切板新的 HTML 頁面
 
 :::caution 注意事項
-
 - 📒 A4 頁面為固定大小 , 尺寸為 `210 x 297 mm` = `793.7007874026 x 1122.51968504082 px`
 - 📒 目前單頁的常用大小為 `647 x 1024 px` 跟 `793 x 1122 px` 兩種尺寸 , 請選其中一種尺寸來切版
 - [📝注一：mm 轉 px 計算機](https://www.unitconverters.net/typography/centimeter-to-pixel-x.htm)
 - 📒 PrintCtrl.print 利用 `.main` 當作分頁的錨點 , 因此命名自定義樣式名稱時 , 請勿用 `.main`
 - 📒 列印專用頁 , 請勿在上面加上 JS
-
 :::
 
 ### 呼叫列印函式 ( PrintCtrl.print )

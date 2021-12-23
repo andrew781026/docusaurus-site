@@ -6,6 +6,12 @@ sidebar_position: 4
 
 日期選單使用 [bootstrap-datetimepicker](https://getdatepicker.com/4/Options/#defaultDate) 套件 , 並且在其之上進行加工
 
+
+:::danger 警示
+`bootstrap-datetimepicker` 是早期的元件 , 他會將 datePicker 附加到 `<input type="text">` 旁邊 ,
+因此如果 wrapper 有 overflow : 'hidden' 或 'scroll' 樣式時 datePicker 會被遮住需要注意
+:::
+
 ## 快速開始
 
 ### 引入第三方套件
@@ -79,11 +85,9 @@ $('end_date').data('DateTimePicker').maxDate(moment().add(6, 'd')) // 結束日�
 $('start_date').data('DateTimePicker').date(moment()) // 起始日的預設日期為今天
 ```
 
-### HTML 屬性
+### 🔹 HTML 屬性
 
-#### 🟢 data-date-format
-
-設定顯示的日期格式 , 下表是對照表
+#### 🟢 data-date-format ( data-min-date="YYYY-MM-DD" )
 
 | 格式 | 顯示 |
 |--|--|
@@ -92,34 +96,23 @@ $('start_date').data('DateTimePicker').date(moment()) // 起始日的預設日�
 
 詳細的日期格式對照 , 請參考 [moment 官方文件](https://momentjs.com/docs/)
 
-#### 🟢 data-min-date
+#### 🟢 data-min-date ( data-min-date="+5" )
 
-設定用於切換到 create mode 的 value 值
+設定最小日期為 today+n 天
 
-#### 🟢 placeholder
+#### 🟢 data-range-date ( data-range-date="+180" )
 
-輸入框的 placeholder , nodata mode 時會顯示
+設定起訖日不能大於 n 天
 
-#### 🟢 data-value
+:::caution 注意事項
+data-range-date 只有放在 end_date 上才會生效
+:::
 
-- 類型 : String
+### 🔹 JS 常用方法
 
-下拉選單中的被選中的項目值
-
-#### 🟢 data-json
-
-- 類型 : Array< { value , text } >
-
-下拉選單中的可選項目 `value` = 項目值 , `text` = 項目文字
-
-#### 🟢 data-mode
-
-- 類型 : String : 'create' . 'nodata' . 'edit' . 'view'
-
-下拉選單目前的狀態  `create` = 自由輸入文字 , `nodata` = 沒有選擇任何選項, `edit` = 篩選中 , `view` = 查看目前選擇向
-
-### 方法
-
-|||
-|--|--|
-|||
+```javascript title="JS 中的一些設定"
+// 詳細的日期計算請參考 : https://momentjs.com/docs/#/manipulating/
+$('start_date').data('DateTimePicker').minDate(moment().subtract(2, 'y')) // 起始日的最小日期為 2 年前
+$('end_date').data('DateTimePicker').maxDate(moment().add(6, 'd')) // 結束日的最大日期為 6 天後
+$('start_date').data('DateTimePicker').date(moment()) // 起始日的預設日期為今天
+```
