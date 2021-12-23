@@ -1,8 +1,8 @@
 ---
-sidebar_position: 5
+sidebar_position: 1
 ---
 
-# 列表元件
+# 目錄
 
 > 此網站用來說明目前設計的前端元件之使用方式 & 參數的使用
 
