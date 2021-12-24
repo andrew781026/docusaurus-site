@@ -16,22 +16,13 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/ysdt-component">
+            to="/docs/ysdt-component/">
             瀏覽元件
           </Link>
         </div>
       </div>
     </header>
   );
-}
-
-const Footer = () => {
-
-  return (
-    <div>
-      你好 !
-    </div>
-  )
 }
 
 export default function Home() {
