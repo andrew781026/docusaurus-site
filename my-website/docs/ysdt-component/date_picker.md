@@ -116,3 +116,7 @@ $('start_date').data('DateTimePicker').minDate(moment().subtract(2, 'y')) // 起
 $('end_date').data('DateTimePicker').maxDate(moment().add(6, 'd')) // 結束日的最大日期為 6 天後
 $('start_date').data('DateTimePicker').date(moment()) // 起始日的預設日期為今天
 ```
+
+## 參考資料
+
+- [bootstrap-datetimepicker 官方文件](https://getdatepicker.com/4/Options/#defaultDate)
