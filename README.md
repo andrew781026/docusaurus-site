@@ -16,3 +16,7 @@
 在 `.github\workflows\web.yml` 檔案中 , 有定義 github-action 的執行 Job
 
 因此只要有任何的 git push 或 pull request 到 main 分支中 , 都會讓 github-action 的執行 Job - redeploy gh-pages
+
+### 站內搜尋
+
+使用 [docusaurus-search-local](https://github.com/easyops-cn/docusaurus-search-local) 作站內搜尋
