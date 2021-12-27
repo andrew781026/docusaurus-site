@@ -14,9 +14,7 @@ sidebar_position: 6
 
 ### 引入第三方套件
 
-`ckeditor.js` 檔案要從 [online-builder](https://ckeditor.com/ckeditor-5/online-builder/) 上設定 & 下載
-
-將下方的 js 引入到 html 中 , 即可開始使用 `ckeditor` 元件
+將專案中下方的 js 引入到 html 中 , 即可開始使用 `ckeditor` 元件
 
 ```html
   <!-- 引用 ckeditor 5 -->
@@ -26,11 +24,38 @@ sidebar_position: 6
   <script src="/js/form_common.js"></script>
 ```
 
+:::tip 提示
+如果 `ckeditor.js` 檔案有特定功能無法啟用時 ,
+可以到 [online-builder](https://ckeditor.com/ckeditor-5/online-builder/) 上重新設定需要的功能 & 下載
+:::
+
 ### 使用 ckeditor5
 
-需要在 html 先設定一個 textarea 然後再將 ckeditor 掛載上去
+ckeditor5 的使用方式是 , 在 html 中設定一個 textarea 然後再將 ckeditor 掛載上去 ,    
+如下方所示 :
 
-✳ 下方列表一些常用的 html 格式
+```html title="in html"
+<textarea class="ckeditor" name="product_content"></textarea>
+```
+
+```js title="in js"
+// Init CKEditor
+window.ckeditorCtrl.initEditor()
+window.ckeditorCtrl.setUploadUrl('https://example.com/圖片上傳網址')
+window.ckeditorCtrl.addEditor(document.querySelector('textarea[name="product_content"]'))
+```
+
+#### 已定義的 ckeditor5 類型
+
+下方是專案中已定義的 ckeditor5 類型
+
+- 🔹 沒有外框 ( noToolBar )
+- 🔹 可以編輯 ( canEdit )
+- 🔹 純顯示  ( readOnly )
+
+---
+
+✳ 下方展示各類型的使用方式 & 呈現的樣式
 
 🟢 沒有外框
 
@@ -155,4 +180,4 @@ setTimeout(() => {
 
 ## 參考資料
 
-- [bootstrap-datetimepicker 官方文件](https://getdatepicker.com/4/Options/#defaultDate)
+- [ckeditor 5 官方文件](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/predefined-builds/quick-start.html)

@@ -8,6 +8,7 @@ sidebar_position: 1
 
 - [filter_select](filter_select)
 - [multi_select](multi_select)
+- [ckeditor](ckeditor)
 - image_picker
 - showPopupbox
 - fileListBox
