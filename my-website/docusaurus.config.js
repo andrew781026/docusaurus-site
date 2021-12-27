@@ -37,7 +37,9 @@ const config = {
     ],
   ],
 
-  themes: ['@docusaurus/theme-live-codeblock'],
+  themes: [
+    '@docusaurus/theme-live-codeblock',
+  ],
 
   themeConfig: {
     colorMode: {
@@ -69,6 +71,26 @@ const config = {
       style: 'dark',
       links: [],
       copyright: `Copyright © ${new Date().getFullYear()} YSDT Scm3 Project, Inc. Built with Docusaurus.`,
+    },
+    algolia: {
+      // If Algolia did not provide you any appId, use 'BH4D9OD16A'
+      appId: 'RLF7G2EG84',
+
+      // Public API key: it is safe to commit it
+      apiKey: '29527dd1a566402e623a37e3fd4acdea',
+
+      indexName: 'YSDT_FrontEnd',
+
+      // Optional: see doc section below
+      contextualSearch: true,
+
+      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      // externalUrlRegex: 'external\\.com|domain\\.com',
+
+      // Optional: Algolia search parameters
+      // searchParameters: {},
+
+      //... other Algolia params
     },
   },
 };
