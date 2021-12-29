@@ -11,6 +11,7 @@ sidebar_position: 1
 - [ckeditor](ckeditor)
 - image_picker
 - showPopupbox
+- [tableCtrl](table_ctrl)
 - fileListBox
 - [PrintCtrl.print](print)
 - uploadProgressBar
