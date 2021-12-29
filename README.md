@@ -1,4 +1,4 @@
-# YSDT 重構案 - 前端文件
+# [YSDT 重構案 - 前端文件](https://andrew781026.github.io/docusaurus-site/)
 
 使用 [docusaurus](https://docusaurus.io/) 建立文件網站
 
