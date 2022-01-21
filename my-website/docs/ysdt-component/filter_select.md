@@ -11,6 +11,12 @@ scm3 跟 ecm 有許多需要在下拉選單中有搜尋的功能 , 因此前端�
 - 資料量過大 , 自動分頁處理 ( scroll-paging )
 - 可取得遠端資料 ( can-remote )
 
+## 功能試用
+
+<iframe width="100%" height="400px" src="https://andrew781026.github.io/daliy-web-ui/filter-select/filter-select.html">
+你的瀏覽器不支援 iframe
+</iframe>
+
 ## 快速開始
 
 將下方的 css 跟 js 引入到 html 中 , 即可開始使用 `filter_select` 元件
