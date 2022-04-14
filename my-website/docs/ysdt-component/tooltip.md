@@ -8,7 +8,7 @@ scm3 跟 ecm 有許多需要在 tooltip 功能 , 因此前端團隊引用 jbox �
 
 ## 快速開始
 
-將下方的 css 跟 js 引入到 html 中 , 即可開始使用 `clipboard-input` 元件
+將下方的 css 跟 js 引入到 html 中 , 即可開始使用 `tooltip` 元件
 
 ```html
 <!-- 引用 jquery -->
@@ -31,7 +31,7 @@ scm3 跟 ecm 有許多需要在 tooltip 功能 , 因此前端團隊引用 jbox �
 <script src="/js/form_common.js" type="text/javascript"></script>
 ```
 
-form_common.js 內 文字複製的程式碼如下
+form_common.js 內 與 Tooltip 相關的程式碼如下
 
 ```js
 // 全局jBox
@@ -48,7 +48,7 @@ const myTooltip = new jBox("Tooltip", {
   },
 });
 
-//ajax撈資料時，可以呼叫 attachTooltip讓有需要浮水層的html element能有tooltip的效果
+// ajax 撈資料時，可以呼叫 attachTooltip 讓有需要浮水層的 html element 能有 tooltip 的效果
 window.attachTooltip = () => myTooltip.attach(".tooltip", "mouseenter");
 ```
 

@@ -10,11 +10,6 @@ checkbox -> checkAll
 
 sorting
 
-## 前端的排序
-
-sorting
-
 ## 特別注意事項
 
 - popup 中的 table 有 tbody 的一些 issue
-
